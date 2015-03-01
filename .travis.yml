@@ -1,0 +1,8 @@
+language: csharp
+solution: src/DSmall.Core.sln
+install:
+  - nuget restore src/DSmall.Core.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release src/DSmall.Core.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./src/DSmall.Core.UnitTest/bin/Release/DSmall.Core.UnitTest.dll
