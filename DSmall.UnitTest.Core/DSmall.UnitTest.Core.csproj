@@ -60,8 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DSmall.UnitTest.Core.nuspec" />
-    <None Include="Nuget\Run.bat" />
-    <None Include="Nuget\nuget.exe" />
+    <None Include="NuGetPush.bat" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

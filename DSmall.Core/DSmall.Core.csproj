@@ -54,8 +54,7 @@
   <ItemGroup>
     <None Include="DSmall.Core.nuspec" />
     <None Include="DSmallKey.snk" />
-    <None Include="Nuget\Run.bat" />
-    <None Include="Nuget\nuget.exe" />
+    <None Include="NugetPush.bat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
