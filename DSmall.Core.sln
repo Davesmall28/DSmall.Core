@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSmall.Core", "DSmall.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSmall.Core.UnitTest", "DSmall.Core.UnitTest\DSmall.Core.UnitTest.csproj", "{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSmall.UnitTest.Core", "DSmall.UnitTest.Core\DSmall.UnitTest.Core.csproj", "{50C23663-4C1A-4E51-B959-66F9B1E090F3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{002FBC70-B160-44E4-988D-4F602F1A8738}"
 	ProjectSection(SolutionItems) = preProject
 		NuGet\NuGet.exe = NuGet\NuGet.exe
@@ -28,10 +26,6 @@ Global
 		{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50C23663-4C1A-4E51-B959-66F9B1E090F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50C23663-4C1A-4E51-B959-66F9B1E090F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50C23663-4C1A-4E51-B959-66F9B1E090F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50C23663-4C1A-4E51-B959-66F9B1E090F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
