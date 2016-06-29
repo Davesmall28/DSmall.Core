@@ -3,7 +3,6 @@
     using System;
     using DSmall.UnitTest.Core;
     using NUnit.Framework;
-    using Guard = DSmall.Core.Guard;
 
     // ReSharper disable ExpressionIsAlwaysNull
 
@@ -21,11 +20,10 @@
 
         /// <summary>The should throw argument null exception.</summary>
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void ShouldThrowArgumentNullException()
         {
             DummyClass toTest = null;
-            Guard.NotNull(() => toTest, toTest);
+            Assert.Throws<ArgumentNullException>(() => Guard.NotNull(() => toTest, toTest));
         }
 
         /// <summary>The null or empty check should execute successfully.</summary>
@@ -38,11 +36,10 @@
 
         /// <summary>The should throw argument exception.</summary>
         [Test]
-        [ExpectedException(typeof(ArgumentException))]
         public void ShouldThrowArgumentException()
         {
             string toTest = string.Empty;
-            Guard.NotNullOrEmpty(() => toTest, toTest);
+            Assert.Throws<ArgumentException>(() => Guard.NotNullOrEmpty(() => toTest, toTest));
         }
     }
 }
