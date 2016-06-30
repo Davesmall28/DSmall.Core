@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
@@ -7,9 +7,15 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://raw.githubusercontent.com/Davesmall28/DSmall.DynamicsCrm.Plugins.Core/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Davesmall28/DSmall.Core/master/LICENSE</licenseUrl>
     <description>$description$</description>
-    <copyright>Copyright $author$ 2015</copyright>
+    <copyright>Copyright $author$ 2016</copyright>
     <tags>DSmall Core Framework</tags>
   </metadata>
+    <files>
+      <file src="bin\Release-Net40\*.dll" target="lib\net40" />
+      <file src="bin\Release-Net40\*.pdb" target="lib\net40" />
+      <file src="bin\Release-Net45\*.dll" target="lib\net45" />
+      <file src="bin\Release-Net45\*.pdb" target="lib\net45" />
+    </files>
 </package>

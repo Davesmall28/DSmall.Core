@@ -4,5 +4,7 @@ install:
   - nuget restore DSmall.Core.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release DSmall.Core.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DSmall.Core.UnitTest/bin/Release/DSmall.Core.UnitTest.dll
+  - xbuild /p:Configuration=Release-Net40 DSmall.Core.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DSmall.Core.UnitTest/bin/Release-Net40/DSmall.Core.UnitTest.dll
+  - xbuild /p:Configuration=Release-Net45 DSmall.Core.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DSmall.Core.UnitTest/bin/Release-Net45/DSmall.Core.UnitTest.dll

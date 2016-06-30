@@ -1,5 +1,5 @@
-..\NuGet\NuGet.exe pack DSmall.Core.csproj -Build -symbols
+..\NuGet\NuGet.exe pack DSmall.Core.csproj -Build -symbols -Properties Configuration=Release
 
-..\NuGet\NuGet push DSmall.Core.1.0.3.nupkg
+..\NuGet\NuGet push DSmall.Core.1.0.5.nupkg
 
 pause
