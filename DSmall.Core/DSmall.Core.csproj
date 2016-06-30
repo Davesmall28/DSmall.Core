@@ -103,4 +103,8 @@
     <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40"/>
     <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45"/>
   </Target>
+  <Target Name="MyGetAfterBuild">
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40"/>
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45"/>
+  </Target>
 </Project>
