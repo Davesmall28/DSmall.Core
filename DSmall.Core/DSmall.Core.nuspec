@@ -12,10 +12,10 @@
     <copyright>Copyright $author$ 2016</copyright>
     <tags>DSmall Core Framework</tags>
   </metadata>
-    <files>
-      <file src="bin\Release-Net40\*.dll" target="lib\net40" />
-      <file src="bin\Release-Net40\*.pdb" target="lib\net40" />
-      <file src="bin\Release-Net45\*.dll" target="lib\net45" />
-      <file src="bin\Release-Net45\*.pdb" target="lib\net45" />
-    </files>
+  <files>
+    <file src="bin\Release-Net40\*.dll" target="lib\net40" />
+    <file src="bin\Release-Net40\*.pdb" target="lib\net40" />
+    <file src="bin\Release-Net45\*.dll" target="lib\net45" />
+    <file src="bin\Release-Net45\*.pdb" target="lib\net45" />
+  </files>
 </package>
