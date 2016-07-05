@@ -82,15 +82,27 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release' Or '$(Configuration)' == 'Debug-Net40' Or '$(Configuration)' == 'Release-Net40'">
     <Reference Include="DSmall.UnitTest.Core">
-      <HintPath>..\packages\DSmall.UnitTest.Core.1.1.1\lib\net40\DSmall.UnitTest.Core.dll</HintPath>
+      <HintPath>..\packages\DSmall.UnitTest.Core.1.2.2\lib\net40\DSmall.UnitTest.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.0.5813.39032, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.0.1\lib\net40\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net40\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug-Net45' Or '$(Configuration)' == 'Release-Net45'">
+    <Reference Include="DSmall.UnitTest.Core">
+      <HintPath>..\packages\DSmall.UnitTest.Core.1.2.2\lib\net45\DSmall.UnitTest.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -140,11 +152,11 @@
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40"/>
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45"/>
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40" />
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45" />
   </Target>
   <Target Name="MyGetAfterBuild">
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40"/>
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45"/>
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40" />
+    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45" />
   </Target>
 </Project>
