@@ -96,7 +96,6 @@
   <ItemGroup>
     <None Include="DSmall.Core.nuspec" />
     <None Include="DSmallKey.snk" />
-    <None Include="NugetPush.bat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">

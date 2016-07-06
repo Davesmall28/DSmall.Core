@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSmall.Core", "DSmall.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSmall.Core.UnitTest", "DSmall.Core.UnitTest\DSmall.Core.UnitTest.csproj", "{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{002FBC70-B160-44E4-988D-4F602F1A8738}"
-	ProjectSection(SolutionItems) = preProject
-		NuGet\NuGet.exe = NuGet\NuGet.exe
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
