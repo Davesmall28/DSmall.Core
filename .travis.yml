@@ -2,9 +2,9 @@ language: csharp
 solution: DSmall.Core.sln
 install:
   - nuget restore DSmall.Core.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget install NUnit.ConsoleRunner -Version 3.4.1 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release-Net40 DSmall.Core.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DSmall.Core.UnitTest/bin/Release-Net40/DSmall.Core.UnitTest.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./DSmall.Core.UnitTest/bin/Release-Net40/DSmall.Core.UnitTest.dll
   - xbuild /p:Configuration=Release-Net45 DSmall.Core.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DSmall.Core.UnitTest/bin/Release-Net45/DSmall.Core.UnitTest.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./DSmall.Core.UnitTest/bin/Release-Net45/DSmall.Core.UnitTest.dll
