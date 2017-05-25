@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{154491A4-C99C-4F2A-B885-2AE1E3FC8F72}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DSmall.Core.UnitTest</RootNamespace>
-    <AssemblyName>DSmall.Core.UnitTest</AssemblyName>
+    <RootNamespace>Springboard365.Core.Test</RootNamespace>
+    <AssemblyName>Springboard365.Core.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,31 +16,23 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-Net40|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -82,81 +74,46 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
-  <ItemGroup Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release' Or '$(Configuration)' == 'Debug-Net40' Or '$(Configuration)' == 'Release-Net40'">
-    <Reference Include="DSmall.UnitTest.Core">
-      <HintPath>..\packages\DSmall.UnitTest.Core.1.2.2\lib\net40\DSmall.UnitTest.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net40\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)' == 'Debug-Net45' Or '$(Configuration)' == 'Release-Net45'">
-    <Reference Include="DSmall.UnitTest.Core">
-      <HintPath>..\packages\DSmall.UnitTest.Core.1.2.2\lib\net45\DSmall.UnitTest.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Springboard365.UnitTest.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Springboard365.UnitTest.Core.1.0.0\lib\net40\Springboard365.UnitTest.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
-  <Choose>
-    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-      </ItemGroup>
-    </When>
-    <Otherwise />
-  </Choose>
   <ItemGroup>
     <Compile Include="AttributeUtilities\CustomAttributeUtilitiesSpecificationsFixture.cs" />
-    <Compile Include="AttributeUtilities\DummyAttribute.cs" />
-    <Compile Include="AttributeUtilities\DummyClass.cs" />
+    <Compile Include="TestData\DummyAttribute.cs" />
+    <Compile Include="TestData\DummyClass.cs" />
     <Compile Include="AttributeUtilities\WhenAttemptingRetrievalOfAnAttributeThatIsNotSetOnAField.cs" />
     <Compile Include="AttributeUtilities\WhenRetrievingAnExistingAttributeHeldAgainstAField.cs" />
-    <Compile Include="Validation\GuardSpecifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\GuardSpecifications.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DSmall.Core\DSmall.Core.csproj">
-      <Project>{bb9fa708-7cdd-4324-a9d2-833b3063d5f2}</Project>
-      <Name>DSmall.Core</Name>
+    <ProjectReference Include="..\Springboard365.Core\Springboard365.Core.csproj">
+      <Project>{b23ad454-74d7-4e61-a1df-ee23143375bd}</Project>
+      <Name>Springboard365.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <Choose>
-    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <Private>False</Private>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40" />
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45" />
+    <MSBuild Projects="..\Springboard365.Core.sln" Properties="Configuration=Release-Net40" />
+    <MSBuild Projects="..\Springboard365.Core.sln" Properties="Configuration=Release-Net45" />
   </Target>
   <Target Name="MyGetAfterBuild">
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net40" />
-    <MSBuild Projects="..\DSmall.Core.sln" Properties="Configuration=Release-Net45" />
+    <MSBuild Projects="..\Springboard365.Core.sln" Properties="Configuration=Release-Net40" />
+    <MSBuild Projects="..\Springboard365.Core.sln" Properties="Configuration=Release-Net45" />
   </Target>
 </Project>

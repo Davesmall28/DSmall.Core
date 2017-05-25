@@ -7,10 +7,10 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://raw.githubusercontent.com/Davesmall28/DSmall.Core/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Springboard365/Springboard365.Core/master/LICENSE</licenseUrl>
     <description>$description$</description>
-    <copyright>Copyright $author$ 2016</copyright>
-    <tags>DSmall Core Framework</tags>
+    <copyright>Copyright $author$ 2017</copyright>
+    <tags>Springboard365 Core Framework</tags>
   </metadata>
   <files>
     <file src="bin\Release-Net40\*.dll" target="lib\net40" />

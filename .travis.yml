@@ -1,10 +1,10 @@
 language: csharp
-solution: DSmall.Core.sln
+solution: Springboard365.Core.sln
 install:
-  - nuget restore DSmall.Core.sln
+  - nuget restore Springboard365.Core.sln
   - nuget install NUnit.ConsoleRunner -Version 3.4.1 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release-Net40 DSmall.Core.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./DSmall.Core.UnitTest/bin/Release-Net40/DSmall.Core.UnitTest.dll
-  - xbuild /p:Configuration=Release-Net45 DSmall.Core.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./DSmall.Core.UnitTest/bin/Release-Net45/DSmall.Core.UnitTest.dll
+  - xbuild /p:Configuration=Release-Net40 Springboard365.Core.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.UnitTest/bin/Release-Net40/Springboard365.Core.UnitTest.dll
+  - xbuild /p:Configuration=Release-Net45 Springboard365.Core.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.UnitTest/bin/Release-Net45/Springboard365.Core.UnitTest.dll
