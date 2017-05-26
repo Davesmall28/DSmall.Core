@@ -5,6 +5,6 @@ install:
   - nuget install NUnit.ConsoleRunner -Version 3.4.1 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release-Net40 Springboard365.Core.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.UnitTest/bin/Release-Net40/Springboard365.Core.UnitTest.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.Test/bin/Release-Net40/Springboard365.Core.Test.dll
   - xbuild /p:Configuration=Release-Net45 Springboard365.Core.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.UnitTest/bin/Release-Net45/Springboard365.Core.UnitTest.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Springboard365.Core.Test/bin/Release-Net45/Springboard365.Core.Test.dll
